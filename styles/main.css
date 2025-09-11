@@ -3,6 +3,7 @@ body {
     background-color: #faf9f788;
 }
 
+/* Header css */
 #header {
     display: flex;
     flex-direction: row;
@@ -22,7 +23,7 @@ body {
 .navigation {
     display: flex;
     flex-direction: row;
-    gap: 4vw;
+    gap: 4.5vw;
 }
 
 .navigation a {
@@ -40,5 +41,109 @@ body {
     background-color: #FFD364;
     padding: 1vw 2vw;
     border-style: hidden;
-    border-radius: 100px;
+    border-radius: 5px;
+}
+
+/* Welcome section css */
+#welcoming {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #79746a21;
+}
+
+.welcomeImg1 {
+    width: 6vw;
+    align-self: flex-end;
+    padding-bottom: 10vw;
+}
+
+.welcomeImg2 {
+    width: 10vw;
+    margin: 0vw 1vw;
+}
+
+.welcomeImg3 {
+    width: 7vw;
+    align-self: flex-start;
+    padding-top: 10vw;
+}
+
+.welcomeImg4 {
+    width: 6vw;
+}
+
+.name {
+    font-family: Consolas;
+    font-size: 3.75vw;
+    font-weight: bold;
+    margin: 1vw;
+    width: fit-content;
+    background-color: #9FD25A;
+}
+
+.specialist {
+    font-family: Consolas;
+    font-size: 2.25vw;
+    font-weight: bold;
+    margin: 0vw 1vw;
+    width: fit-content;
+    background-color: #FF6F5C;
+}
+
+.brief {
+    font-family: Consolas;
+    font-size: 1.25vw;
+    font-weight: bold;
+    margin-left: 1vw;
+
+}
+
+/* About me section css */
+#aboutMe {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#aboutMe div {
+    align-self: flex-start;
+}
+
+.educationImg {
+    width: 6vw;
+    align-self: center;
+    padding-top: 5vw;
+}
+
+.aboutMeImg {
+    width: 6vw;
+    margin: 6vw 1vw 1vw;
+}
+
+.aboutMeTitle {
+    font-family: Consolas;
+    font-size: 3.5vw;
+    font-weight: bold;
+    margin: 0vw 1vw;
+    width: fit-content;
+}
+
+.aboutMeDescription {
+    font-family: Consolas;
+    font-size: 1.25vw;
+    font-weight: bold;
+    margin: 4vw 1vw;
+    width: 70vw;
+    text-align: justify;
+}
+
+.goalImg {
+    width: 6vw;
+    align-self: center;
+    padding-top: 30vw;
 }
