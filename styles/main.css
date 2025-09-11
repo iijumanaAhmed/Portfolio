@@ -1,3 +1,8 @@
+* {
+    font-family: Consolas;
+    color: black;
+}
+
 body {
     margin: 0;
     background-color: #faf9f788;
@@ -27,15 +32,12 @@ body {
 }
 
 .navigation a {
-    font-family: Consolas;
-    color: black;
     font-size: 1vw;
     font-weight: bold;
     text-decoration: none;
 }
 
 .resume {
-    font-family: Consolas;
     font-size: 1vw;
     font-weight: bold;
     background-color: #FFD364;
@@ -48,35 +50,46 @@ body {
 #welcoming {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: #79746a21;
+    min-height: 90vh;
 }
 
-.welcomeImg1 {
-    width: 6vw;
+#welcoming div {
     align-self: flex-end;
     padding-bottom: 10vw;
 }
 
-.welcomeImg2 {
+.welcomeImg1 {
     width: 10vw;
     margin: 0vw 1vw;
 }
 
-.welcomeImg3 {
-    width: 7vw;
+.welcomeImg2 {
+    width: 6vw;
     align-self: flex-start;
     padding-top: 10vw;
 }
 
+.welcomeImg3 {
+    width: 6vw;
+    align-self: flex-start;
+    padding-top: 20vw;
+}
+
 .welcomeImg4 {
     width: 6vw;
+    align-self: flex-start;
+    padding-top: 14vw;
+}
+
+.welcomeImg5 {
+    width: 5vw;
+    align-self: flex-start;
+    padding-top: 25vw;
 }
 
 .name {
-    font-family: Consolas;
     font-size: 3.75vw;
     font-weight: bold;
     margin: 1vw;
@@ -85,7 +98,6 @@ body {
 }
 
 .specialist {
-    font-family: Consolas;
     font-size: 2.25vw;
     font-weight: bold;
     margin: 0vw 1vw;
@@ -94,7 +106,6 @@ body {
 }
 
 .brief {
-    font-family: Consolas;
     font-size: 1.25vw;
     font-weight: bold;
     margin-left: 1vw;
@@ -108,6 +119,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     min-height: 100vh;
+    background-color: #79746a21;
 }
 
 #aboutMe div {
@@ -117,7 +129,7 @@ body {
 .educationImg {
     width: 6vw;
     align-self: center;
-    padding-top: 5vw;
+    padding-top: 6vw;
 }
 
 .aboutMeImg {
@@ -126,7 +138,6 @@ body {
 }
 
 .aboutMeTitle {
-    font-family: Consolas;
     font-size: 3.5vw;
     font-weight: bold;
     margin: 0vw 1vw;
@@ -134,7 +145,6 @@ body {
 }
 
 .aboutMeDescription {
-    font-family: Consolas;
     font-size: 1.25vw;
     font-weight: bold;
     margin: 4vw 1vw;
@@ -146,4 +156,100 @@ body {
     width: 6vw;
     align-self: center;
     padding-top: 30vw;
+}
+
+/* Skills section css */
+#skills,
+.skillsHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: fit-content;
+}
+
+.skillsRow {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 85%;
+}
+
+.skillsImg {
+    width: 6vw;
+    margin: 6vw 1vw 1vw;
+}
+
+.skillsTitle {
+    font-size: 2.5vw;
+    font-weight: bold;
+    margin: 0vw 1vw 4vw;
+    width: fit-content;
+}
+
+.iconSize {
+    width: 4vw;
+}
+
+.skillCategory {
+    font-size: 2vw;
+    font-weight: 600;
+}
+
+.skillList {
+    display: flex;
+    margin-bottom: 6vw;
+}
+
+.skillList div {
+    width: 8vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 1vw 4vw;
+}
+
+/* Tools & Technologies section css */
+#techStack,
+.toolsHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: max-content;
+}
+
+.toolRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.toolsImg {
+    width: 6vw;
+    margin: 6vw 1vw 1vw;
+}
+
+.toolsTitle {
+    font-size: 2.5vw;
+    font-weight: bold;
+    margin: 0vw 1vw 4vw;
+    width: fit-content;
+}
+
+.toolSize {
+    width: 12vw;
+    height: fit-content;
+}
+
+.toolList {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2vw;
+}
+
+.toolList img {
+    display: flex;
+    margin: 1vw 5vw;
 }
