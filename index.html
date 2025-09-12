@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jumana Portfolio</title>
+
+    <!-- icon code copied from w3school -->
+    <link rel="icon" type="image/x-icon" href="/images/portofolio_logo.png">
     <link rel="stylesheet" href="./styles/main.css">
+    <script src="./scripts/app.js"></script>
 </head>
 
 <body>
     <header id="header">
-        <img src="./images/portofolio_logo.png" class="logo">
+        <a href=""><img src="./images/portofolio_logo.png" class="logo"></a>
         <nav class="navigation">
             <a href="#aboutMe">About Me</a>
             <a href="#skills">Skills</a>
@@ -27,10 +31,10 @@
             <h1 class="name">Hello, I'm Jumana Khawaji</h1>
             <h3 class="specialist">FULL-STACK DEVELOPER</h3>
         </div>
-        <img class="welcomeImg2" src="./images/network.png" alt="network">
-        <img class="welcomeImg3" src="./images/code_debug.png" alt="code debug">
-        <img class="welcomeImg4" src="./images/binary_numbers.png" alt="binary numbers">
-        <img class="welcomeImg5" src="./images/web_coding.png" alt="web coding">
+        <img id="iconUp" class="welcomeImg2" src="./images/network.png" alt="network">
+        <img id="iconDown" class="welcomeImg3" src="./images/code_debug.png" alt="code debug">
+        <img id="iconUp" class="welcomeImg4" src="./images/binary_numbers.png" alt="binary numbers">
+        <img id="iconDown" class="welcomeImg5" src="./images/web_coding.png" alt="web coding">
     </section>
 
     <section id="aboutMe">
@@ -52,7 +56,19 @@
                 skills by implementing realistic and effective solutions.
                 I am excited to progress further and look forward to any opportunity to apply my programming and
                 creative skills to find solutions that make an effective impact.</p>
-            <!-- <p class="aboutMeDescription">Certificates Gallary: </p> -->
+            <h2 class="aboutMeCertificates">Certificates</h2>
+            <div class="certificatesGallary">
+                <div class="certificateCard">
+                    <p class="certificateTitle">Saudi Aramco <br> Certificate of Completion</p>
+                    <p class="certificateDate">Juna 23, 2024 - August 15, 2024</p>
+                    <img class="certificateImg" src="./images/certificates/AramcoCertificate.png" alt="">
+                </div>
+                <div class="certificateCard">
+                    <p class="certificateTitle">Coursera - Course Certificate <br> Foundations of User Experience (UX) Design</p>
+                    <p class="certificateDate">Jul 8, 2024</p>
+                    <img class="certificateImg" src="./images/certificates/CourseraCertificate-UX.png" alt="">
+                </div>
+            </div>
         </div>
         <img class="goalImg" src="./images/goal.png" alt="goals">
     </section>
@@ -216,13 +232,13 @@
 
     <footer id="contacts">
         <div class="contactsHeader">
-            <img class="contactsImg" src="./images/contacts1.png" alt="Contact Me">
+            <img class="contactsImg" src="./images/contacts.png" alt="Contact Me">
             <h1 class="contactsTitle">Contact Me</h1>
         </div>
         <div class="socialAccounts">
-            <a href=""> <img class="iconSize" src="./images/email.png"> Email</a>
-            <a href=""> <img class="iconSize" src="./images/linkedin.png"> LinkedIn</a>
-            <a href=""> <img class="iconSize" src="./images/skills/git_github.png"> GitHub</a>
+            <a href=""> <img class="contactIcon" src="./images/email.png"> Email</a>
+            <a href=""> <img class="contactIcon" src="./images/linkedin.png"> LinkedIn</a>
+            <a href=""> <img class="contactIcon" src="./images/skills/git_github.png"> GitHub</a>
         </div>
     </footer>
 </body>

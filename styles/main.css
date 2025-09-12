@@ -38,6 +38,10 @@ body {
     text-decoration: none;
 }
 
+.navigation a:hover {
+    color: #fcc741;
+}
+
 .resume {
     font-size: 1vw;
     font-weight: bold;
@@ -60,6 +64,7 @@ body {
 #welcoming div {
     align-self: flex-end;
     padding-bottom: 10vw;
+    width: 54vw;
 }
 
 .welcomeImg1 {
@@ -88,23 +93,88 @@ body {
 .welcomeImg5 {
     width: 5vw;
     align-self: flex-start;
-    padding-top: 25vw;
+    padding-top: 24vw;
+}
+
+/* The concept of the animation learned from : https://www.w3schools.com/css/css3_animations.asp */
+#iconUp {
+    animation: flowUp 5s ease-in-out 0s infinite;
+}
+
+#iconDown {
+    animation: flowDown 5s ease-in-out 0s infinite;
+}
+
+@keyframes flowUp {
+    0% {}
+
+    50% {
+        padding-top: 12vw;
+    }
+
+    100% {}
+}
+
+@keyframes flowDown {
+    0% {}
+
+    50% {
+        padding-top: 22vw;
+    }
+
+    100% {}
 }
 
 .name {
     font-size: 3.75vw;
     font-weight: bold;
     margin: 1vw;
-    width: fit-content;
     background-color: #9FD25A;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: fit-content;
+    /* The concept of steps() learned to add a typing anination, source from: https://www.w3schools.com/cssref/func_steps.php */
+    animation: nameTyping 6s steps(25) 1;
+}
+
+@keyframes nameTyping {
+    10% {
+        width: 0;
+    }
+
+    90% {
+        width: 95%;
+    }
+
+    100% {
+        width: min-content;
+    }
 }
 
 .specialist {
     font-size: 2.25vw;
     font-weight: bold;
     margin: 0vw 1vw;
-    width: fit-content;
     background-color: #FF6F5C;
+    overflow: hidden;
+    white-space: nowrap;
+    width: fit-content;
+    animation: specialistTyping 5s steps(20) 1;
+}
+
+@keyframes specialistTyping {
+    10% {
+        width: 0;
+    }
+
+    90% {
+        width: 45%;
+    }
+
+    100% {
+        width: min-content;
+    }
 }
 
 .brief {
@@ -130,13 +200,33 @@ body {
 
 .educationImg {
     width: 6vw;
-    align-self: center;
-    padding-top: 6vw;
+    align-self: flex-start;
+    padding-top: 32vw;
+    animation: educationFlow 5s ease-in-out 0s infinite;
+}
+
+@keyframes educationFlow {
+    0% {}
+
+    50% {
+        padding-top: 30vw;
+    }
+
+    100% {}
 }
 
 .aboutMeImg {
     width: 6vw;
     margin: 6vw 1vw 1vw;
+    transform: rotateY(0deg);
+    transition-property: all;
+    transition-duration: 2s;
+}
+
+.aboutMeImg:hover {
+    transform: rotateY(180deg);
+    transition-property: all;
+    transition-duration: 2s;
 }
 
 .aboutMeTitle {
@@ -156,8 +246,65 @@ body {
 
 .goalImg {
     width: 6vw;
+    align-self: flex-start;
+    padding-top: 40vw;
+    animation: goalFlow 5s ease-in-out 0s infinite;
+}
+
+@keyframes goalFlow {
+    0% {}
+
+    50% {
+        padding-top: 42vw;
+    }
+
+    100% {}
+}
+
+.aboutMeCertificates {
+    margin: 4vw 1vw 1vw;
+}
+
+.certificatesGallary {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     align-self: center;
-    padding-top: 30vw;
+    padding: 1vw 0vw 0vw;
+    margin-bottom: 1vw;
+    width: 70vw;
+    height: max-content;
+    overflow: scroll hidden;
+}
+
+.certificateCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    width: fit-content;
+    height: max-content;
+    margin: 0vw 1vw 2vw;
+    padding: 1vw 1vw;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(65, 58, 77, 0.537)
+}
+
+.certificateImg {
+    width: fit-content;
+    height: 15vw;
+}
+
+.certificateTitle {
+    text-align: center;
+    padding: 1vw 0vw 0vw;
+    font-size: 1.25vw;
+    font-weight: 600;
+}
+
+.certificateDate {
+    font-size: 1vw;
+    color: gray;
 }
 
 
@@ -173,6 +320,15 @@ body {
 .skillsImg {
     width: 6vw;
     margin: 6vw 1vw 1vw;
+    transform: rotateY(0deg);
+    transition-property: all;
+    transition-duration: 2s;
+}
+
+.skillsImg:hover {
+    transform: rotateY(180deg);
+    transition-property: all;
+    transition-duration: 2s;
 }
 
 .skillsTitle {
@@ -216,6 +372,20 @@ body {
 
 .iconSize {
     width: 4vw;
+    animation: skillsFlow 1.75s ease-in-out infinite;
+}
+
+@keyframes skillsFlow {
+    0% {}
+
+    35% {
+        margin-left: 0.5vw;
+    }
+    65% {
+        margin-right: 0.5vw;
+    }
+
+    100% {}
 }
 
 
@@ -232,6 +402,15 @@ body {
 .toolsImg {
     width: 6vw;
     margin: 6vw 1vw 1vw;
+    transform: rotateY(0deg);
+    transition-property: all;
+    transition-duration: 2s;
+}
+
+.toolsImg:hover {
+    transform: rotateY(180deg);
+    transition-property: all;
+    transition-duration: 2s;
 }
 
 .toolsTitle {
@@ -256,6 +435,20 @@ body {
 .toolList img {
     display: flex;
     margin: 1vw 5vw;
+    animation: toolFlow 4s ease-in-out infinite;
+}
+
+@keyframes toolFlow {
+    0% {}
+
+    35% {
+        margin-left: 5.25vw;
+    }
+    65% {
+        margin-right: 4.25vw;
+    }
+
+    100% {}
 }
 
 .toolSize {
@@ -336,7 +529,7 @@ body {
 
 
 /* Footer section css */
-#contacts{
+#contacts {
 
     display: flex;
     flex-direction: column;
@@ -349,8 +542,7 @@ body {
     display: flex;
     flex-direction: column;
     align-self: center;
-        align-items: center;
-
+    align-items: center;
 }
 
 .contactsImg {
@@ -365,7 +557,7 @@ body {
     width: fit-content;
 }
 
-.socialAccounts a{
+.socialAccounts a {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -375,6 +567,7 @@ body {
     text-decoration: none;
 }
 
-.socialAccounts a img{
+.contactIcon {
+    width: 4vw;
     padding: 0vw 1vw;
 }
