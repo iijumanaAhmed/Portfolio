@@ -22,7 +22,7 @@
             <a href="#projects">Projects</a>
             <a href="#contacts">Contacts</a>
         </nav>
-        <button class="resume">Resume</button>
+        <button class="btn">Resume</button>
     </header>
 
     <section id="welcoming">
@@ -297,7 +297,8 @@
                 </div>
             </div>
             <div class="projectCard">
-                <img class="projectImg" src="./images/projects/Cafe_Management_System_Project.png" alt="Cafe Management System">
+                <img class="projectImg" src="./images/projects/Cafe_Management_System_Project.png"
+                    alt="Cafe Management System">
                 <a class="projectTitle">Cafe Management System</a>
                 <p class="projectTools">Language used: </p>
                 <p class="projectDescription"></p>
@@ -307,7 +308,8 @@
                 </div>
             </div>
             <div class="projectCard">
-                <img class="projectImg" src="./images/projects/Waste_Classification_ViT_Project.png" alt="Cafe Management System">
+                <img class="projectImg" src="./images/projects/Waste_Classification_ViT_Project.png"
+                    alt="Cafe Management System">
                 <a class="projectTitle">Waste Classification ViT</a>
                 <p class="projectTools">Language used: </p>
                 <p class="projectDescription"></p>
@@ -324,10 +326,19 @@
             <img class="contactsImg" src="./images/contacts.png" alt="Contact Me">
             <h1 class="contactsTitle">Contact Me</h1>
         </div>
+        <form class="contactForm" action="">
+            <label class="fullName" for="fullNameInput">Full Name</label>
+            <input id="fullNameInput" type="text" required>
+            <label class="email" for="emailInput">Email</label>
+            <input id="emailInput" type="email" name="Email" id="email" required>
+            <label class="meassage" for="meassageInput">Meassage</label>
+            <textarea id="meassageInput" name="Meassage" id="" rows="5" required></textarea>
+            <button id="sendForm" class="btn" type="submit">Send</button>
+        </form>
         <div class="socialAccounts">
-            <a href=""> <img class="contactIcon" src="./images/email.png"> Email</a>
-            <a href=""> <img class="contactIcon" src="./images/linkedin.png"> LinkedIn</a>
-            <a href=""> <img class="contactIcon" src="./images/skills/git_github.png"> GitHub</a>
+            <a class="account" id="email"><img class="contactIcon" src="./images/email.png">Email</a>
+            <a class="account" id="github"><img class="contactIcon" src="./images/skills/git_github.png">GitHub</a>
+            <a class="account" id="linkedin"><img class="contactIcon" src="./images/linkedin.png">LinkedIn</a>
         </div>
     </footer>
 </body>
