@@ -7,6 +7,7 @@
     <title>Jumana Portfolio</title>
 
     <!-- icon code copied from w3school -->
+    <!-- All icons used in this project are dowmloaded from: https://www.freepik.com/ -->
     <link rel="icon" type="image/x-icon" href="/images/portofolio_logo.png">
     <link rel="stylesheet" href="./styles/main.css">
     <script src="./scripts/app.js"></script>
@@ -14,7 +15,7 @@
 
 <body>
     <header id="header">
-        <a href=""><img src="./images/portofolio_logo.png" class="logo"></a>
+        <a href=""><img src="./images/portofolio_logo_lightMode.png" class="logo"></a>
         <nav class="navigation">
             <a href="#aboutMe">About Me</a>
             <a href="#skills">Skills</a>
@@ -22,11 +23,15 @@
             <a href="#projects">Projects</a>
             <a href="#contacts">Contacts</a>
         </nav>
-        <button class="btn">Resume</button>
+        <div>
+            <button id="resumeBtn" class="btn">Resume</button>
+            <button id="darkLightModeBtn" class="btn">Dark Mode</button>
+        </div>
     </header>
 
     <section id="welcoming">
-        <div>
+        <div class="welcomText">
+            <img class="lamp" src="./images/lamp.png" alt="lamp">
             <img class="welcomeImg1" src="./images/programmer.png" alt="programmer">
             <h1 class="name">Hello, I'm Jumana Khawaji</h1>
             <h3 class="specialist">FULL-STACK DEVELOPER</h3>
@@ -42,7 +47,7 @@
         <div>
             <img class="aboutMeImg" src="./images/about_me.png" alt="about me card">
             <h1 class="aboutMeTitle">About Me</h1>
-            <p class="aboutMeDescription"> Jumana Ahmed Khawaji, located in Saudi Arabia, Dammam city.
+            <p class="aboutMeDescription"> Jumana Ahmed Khawaji, located in Dammam city, .
                 With expertise in full-stack development and machine learning, I strive to excel in full-stack
                 development to build innovative and effective applications that solve real-world problems.</p>
             <p class="aboutMeDescription"> In May 2025, I earned a Bachelor's degree in Computer Science (CS) from the
@@ -59,10 +64,11 @@
             <h2 class="aboutMeCertificates">Certificates</h2>
             <div class="certificatesGallary">
                 <div class="certificateCard">
-                    <p class="certificateTitle">Saudi Aramco <br> Certificate of Completion</p>
+                    <p class="certificateTitle">Saudi Aramco <br> Certificate of UIP Completion</p>
                     <p class="certificateDate">Juna 23, 2024 - August 15, 2024</p>
                     <img class="certificateImg" src="./images/certificates/AramcoCertificate.png" alt="">
                 </div>
+
                 <div class="certificateCard">
                     <p class="certificateTitle">Coursera - Course Certificate <br> Foundations of User Experience (UX)
                         Design</p>
@@ -183,27 +189,28 @@
 
         <div class="toolRow">
             <div class="toolList">
-                <img class="toolSize" src="./images/tools/anaconda.png">
-                <img class="toolSize" src="./images/tools/Android_Studio.png">
-                <img class="toolSize" src="./images/tools/axure.png">
-                <img class="toolSize" src="./images/tools/balasmiq.png">
+                <img id="androidStudio" class="toolSize" src="./images/tools/Android_Studio_LightMode.png">
+                <img id="anaconda" class="toolSize" src="./images/tools/anaconda.png">
+                <img id="axure" class="toolSize" src="./images/tools/axure_LightMode.png">
+                <img id="balasmiq" class="toolSize" src="./images/tools/balasmiq_LightMode.png">
             </div>
         </div>
 
         <div class="toolRow">
             <div class="toolList">
-                <img class="toolSize" src="./images/tools/colab.png">
-                <img class="toolSize" src="./images/tools/figma.png">
-                <img class="toolSize" src="./images/tools/GitHub.png">
+                <img id="colab" class="toolSize" src="./images/tools/colab.png">
+                <img id="figma" class="toolSize" src="./images/tools/figma_LightMode.png">
+                <img id="netbeans" class="toolSize" src="./images/tools/netbeans.png">
+
             </div>
         </div>
 
         <div class="toolRow">
             <div class="toolList">
-                <img class="toolSize" src="./images/tools/mysql1.png">
-                <img class="toolSize" src="./images/tools/netbeans.png">
-                <img class="toolSize" src="./images/tools/vs_code.png">
-                <img class="toolSize" src="./images/tools/xampp.png">
+                <img id="vscode" class="toolSize" src="./images/tools/vs_code.png">
+                <img id="github" class="toolSize" src="./images/tools/GitHub_LightMode.png">
+                <img id="mysql" class="toolSize" src="./images/tools/mysql.png">
+                <img id="xmapp" class="toolSize" src="./images/tools/xampp_LightMode.png">
             </div>
         </div>
     </section>
@@ -217,104 +224,134 @@
         <div class="projectColumn">
             <div class="projectCard">
                 <img class="projectImg" src="./images/projects/Calculator_Project.png" alt="Calculator">
-                <p class="projectTitle">Calculator</p>
-                <p class="projectTools">Language used: HTML, CSS, JavaScript</p>
+                <p class="projectTitle" style="color: #f26094;">Calculator</p>
                 <p class="projectDescription">Simple calculator built with HTML, CSS, and JavaScript. It supports basic
                     arithmetic operations and features a clean, responsive design.</p>
+                <p class="projectTools">Languages & tools used: HTML, CSS, JavaScript, VS code</p>
                 <div id="Calculator" class="projectLink">
-                    <img src="./images/tools/github_icon.png" alt="github icon">
+                    <img class="githubIcon" src="./images/tools/github_Icon_LightMode.png" alt="github icon">
                     GitHub source code
                 </div>
             </div>
+
             <div class="projectCard">
                 <img class="projectImg" src="./images/projects/FILMAX_Project.jpg" alt="FILEMAX">
-                <a class="projectTitle">FILMAX</a>
-                <p class="projectTools">Language used: </p>
-                <p class="projectDescription"></p>
+                <a class="projectTitle" style="color: #d07a2d;">FILMAX</a>
+                <p class="projectDescription">Movie booking management system that streamlines the process of browsing
+                    movies, checking showtimes, reserving seats, and managing bookings. It provides users with a simple,
+                    efficient, and user-friendly platform for cinema ticket reservations while helping administrators
+                    manage schedules and availability with ease. </p>
+                <p class="projectTools">Languages & tools used: Java, SQL, Netbeans IDE, mySQL</p>
                 <div id="FILMAX" class="projectLink">
-                    <img src="./images/tools/github_icon.png" alt="github icon">
+                    <img class="githubIcon" src="./images/tools/github_Icon_LightMode.png" alt="github icon">
                     GitHub source code
                 </div>
             </div>
+
             <div class="projectCard">
-                <img class="projectImg" src="./images/projects/Soft_and_Grass_Project.jpg" alt="Soft and Grass">
-                <a class="projectTitle">Soft and Grass</a>
-                <p class="projectTools">Language used: </p>
-                <p class="projectDescription"></p>
+                <img class="projectImg" src="./images/projects/Soft_and_Grass_Project.png" alt="Soft and Grass">
+                <a class="projectTitle" style="color: #95ca86;">Soft and Grass</a>
+                <p class="projectDescription">Interior design concept project that explores fresh and imaginative ideas
+                    for modern living spaces. It focuses on experimenting with materials, layouts, and aesthetics to
+                    inspire creative approaches to home and lifestyle design.</p>
+                <p class="projectTools">Languages & tools used: HTML, CSS, VS code</p>
                 <div id="Soft-and-Grass" class="projectLink">
-                    <img src="./images/tools/github_icon.png" alt="github icon">
+                    <img class="githubIcon" src="./images/tools/github_Icon_LightMode.png" alt="github icon">
                     GitHub source code
                 </div>
             </div>
+
             <div class="projectCard">
                 <img class="projectImg" src="./images/projects/PAW_Clinic_Project.png" alt="PAW Clinic">
-                <a class="projectTitle">PAW Clinic</a>
-                <p class="projectTools">Language used: </p>
-                <p class="projectDescription"></p>
+                <a class="projectTitle" style="color: #df9521;">PAW Clinic</a>
+                <p class="projectDescription">Pet appointment reservation system designed to simplify scheduling
+                    veterinary visits. It allows pet owners to easily book, manage, and track appointments while helping
+                    clinics organize schedules and provide efficient care.</p>
+                <p class="projectTools">Languages & tools used: Java, Netbeans IDE</p>
                 <div id="PAW-Clinic" class="projectLink">
-                    <img src="./images/tools/github_icon.png" alt="github icon">
+                    <img class="githubIcon" src="./images/tools/github_Icon_LightMode.png" alt="github icon">
                     GitHub source code
                 </div>
             </div>
+
             <div class="projectCard">
                 <img class="projectImg" src="./images/projects/LearnSphere_Project.png" alt="LearnSphere">
-                <a class="projectTitle">LearnSphere-Android</a>
-                <p class="projectTools">Language used: </p>
-                <p class="projectDescription"></p>
+                <a class="projectTitle" style="color: #2cc5dd;">LearnSphere-Android</a>
+                <p class="projectDescription">Learnsphere is an educational app designed to provide users in Saudi
+                    Arabia with online and in-person courses in tech fields like AI, UX/UI design, and programming.</p>
+                <p class="projectTools">Languages & tools used: Java, Android Studio</p>
                 <div id="LearnSphere-Android" class="projectLink">
-                    <img src="./images/tools/github_icon.png" alt="github icon">
+                    <img class="githubIcon" src="./images/tools/github_Icon_LightMode.png" alt="github icon">
                     GitHub source code
                 </div>
             </div>
+
             <div class="projectCard">
                 <img class="projectImg" src="./images/projects/LearnSphere_Project.png" alt="LearnSphere">
-                <a class="projectTitle">LearnSphere-Swift</a>
-                <p class="projectTools">Language used: </p>
-                <p class="projectDescription"></p>
+                <a class="projectTitle" style="color: #2cc5dd;">LearnSphere-Swift</a>
+                <p class="projectDescription">Learnsphere is an educational app designed to provide users in Saudi
+                    Arabia with online and in-person courses in tech fields like AI, UX/UI design, and programming.</p>
+                <p class="projectTools">Languages & tools used: Swift, Xcode</p>
                 <div id="LearnSphere-Swift" class="projectLink">
-                    <img src="./images/tools/github_icon.png" alt="github icon">
+                    <img class="githubIcon" src="./images/tools/github_Icon_LightMode.png" alt="github icon">
                     GitHub source code
                 </div>
             </div>
+
             <div class="projectCard">
                 <img class="projectImg" src="./images/projects/Floritsia_Project.jpg" alt="Floritsia">
-                <a class="projectTitle">Floritsia</a>
-                <p class="projectTools">Language used: </p>
-                <p class="projectDescription"></p>
+                <a class="projectTitle" style="color: #4f5344;">Floritsia</a>
+                <p class="projectDescription">Plant shopping website that offers a wide variety of indoor and
+                    outdoor plants. It provides an easy and enjoyable way for customers to browse, purchase, and bring
+                    greenery into their spaces.</p>
+                <p class="projectTools">Languages & tools used: HTML, CSS, PHP, SQL, VS code, MySQL, XMAPP</p>
                 <div id="Floritsia" class="projectLink">
-                    <img src="./images/tools/github_icon.png" alt="github icon">
+                    <img class="githubIcon" src="./images/tools/github_Icon_LightMode.png" alt="github icon">
                     GitHub source code
                 </div>
             </div>
+
             <div class="projectCard">
                 <img class="projectImg" src="./images/projects/AutismLens_Project.png" alt="AutismLens">
-                <a class="projectTitle">AutismLens</a>
-                <p class="projectTools">Language used: </p>
-                <p class="projectDescription"></p>
+                <a class="projectTitle" style="color: #1d5bb2;">AutismLens</a>
+                <p class="projectDescription">AutismLens is a deep learning-based project focused on improving the early
+                    diagnosis of Autism Spectrum Disorder (ASD) using facial image analysis. This project integrates
+                    advanced CNN architectures, particularly ConvNeXt, with interpretability tools like Grad-CAM to
+                    provide accurate and explainable predictions. The system is designed to assist clinicians and
+                    researchers in identifying ASD-related patterns through facial features.</p>
+                <p class="projectTools">Language & tools used: HTML, CSS, JS, Python, VS code, Firebase, FastAPI</p>
                 <div id="AutismLens" class="projectLink">
-                    <img src="./images/tools/github_icon.png" alt="github icon">
+                    <img class="githubIcon" src="./images/tools/github_Icon_LightMode.png" alt="github icon">
                     GitHub source code
                 </div>
             </div>
+
             <div class="projectCard">
                 <img class="projectImg" src="./images/projects/Cafe_Management_System_Project.png"
                     alt="Cafe Management System">
-                <a class="projectTitle">Cafe Management System</a>
-                <p class="projectTools">Language used: </p>
-                <p class="projectDescription"></p>
+                <a class="projectTitle" style="color: #ad713d;">Cafe Management System</a>
+                <p class="projectDescription">Management system designed to streamline café operations, including order
+                    processing, menu management, billing, and customer service, making daily management more efficient
+                    and organized.</p>
+                <p class="projectTools">Language & tools used: C++, VS code</p>
                 <div id="Cafe-Management-System" class="projectLink">
-                    <img src="./images/tools/github_icon.png" alt="github icon">
+                    <img class="githubIcon" src="./images/tools/github_Icon_LightMode.png" alt="github icon">
                     GitHub source code
                 </div>
             </div>
+
             <div class="projectCard">
                 <img class="projectImg" src="./images/projects/Waste_Classification_ViT_Project.png"
                     alt="Cafe Management System">
-                <a class="projectTitle">Waste Classification ViT</a>
-                <p class="projectTools">Language used: </p>
-                <p class="projectDescription"></p>
+                <a class="projectTitle" style="color: #406519;">Waste Classification ViT</a>
+                <p class="projectDescription">This project explores the application of Vision Transformers (ViT) in the
+                    field of waste classification, an area where ViT has not been extensively studied. While
+                    Convolutional Neural Networks (CNNs) such as DenseNet, EfficientNet, VGG19 and ResNet have been
+                    widely used for image classification tasks, our research aims to evaluate the potential of ViT in
+                    this domain and compare its performance against these established CNN architectures.</p>
+                <p class="projectTools">Language & tools used: Python, Colab</p>
                 <div id="Waste-Classification-ViT" class="projectLink">
-                    <img src="./images/tools/github_icon.png" alt="github icon">
+                    <img class="githubIcon" src="./images/tools/github_Icon_LightMode.png" alt="github icon">
                     GitHub source code
                 </div>
             </div>

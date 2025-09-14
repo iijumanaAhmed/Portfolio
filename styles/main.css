@@ -1,4 +1,5 @@
 * {
+    /* Microsoft font : https://learn.microsoft.com/en-us/typography/font-list/consolas */
     font-family: Consolas;
     color: black;
 }
@@ -8,6 +9,60 @@ body {
     background-color: #faf9f788;
 }
 
+/* Resume page css */
+.resumeSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    padding-top: 15vw;
+}
+
+.resumeIcon {
+    width: 12vw;
+    animation: resumeIconToggle 5s ease-in-out 0s infinite;
+}
+
+@keyframes resumeIconToggle {
+    0% {
+        padding-left: 1.5vw;
+    }
+
+    50% {
+        padding-right: 1.5vw;
+    }
+
+    100% {
+        padding-left: 1.5vw;
+    }
+}
+
+.resumeMeassage {
+    font-size: 3vw;
+    font-weight: bold;
+    margin: 1vw;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: fit-content;
+    /* The concept of steps() learned to add a typing anination, source from: https://www.w3schools.com/cssref/func_steps.php */
+    animation: resumeTyping 10s steps(15) 1;
+}
+
+@keyframes resumeTyping {
+    10% {
+        width: 0;
+    }
+
+    60% {
+        width: 85%;
+    }
+
+    70% {
+        width: fit-content;
+    }
+}
 
 /* Header css */
 #header {
@@ -39,7 +94,7 @@ body {
 }
 
 .navigation a:hover {
-    color: #fcc741;
+    color: #fcc741 !important;
 }
 
 .btn {
@@ -49,7 +104,7 @@ body {
     padding: 1vw 2vw;
     border-style: hidden;
     border-radius: 5px;
-    width: 8vw;
+    width: fit-content;
 }
 
 
@@ -62,10 +117,23 @@ body {
     min-height: 90vh;
 }
 
-#welcoming div {
+.welcomText {
+    display: flex;
+    flex-direction: column;
     align-self: flex-end;
     padding-bottom: 10vw;
     width: 54vw;
+}
+
+.lamp {
+    width: 10vw;
+    margin-left: 1vw;
+    margin-bottom: 2vw;
+    visibility: hidden;
+}
+
+.darkModeLamp {
+    visibility: visible !important;
 }
 
 .welcomeImg1 {
@@ -161,6 +229,7 @@ body {
     overflow: hidden;
     white-space: nowrap;
     width: fit-content;
+    /* The concept of steps() learned to add a typing anination, source from: https://www.w3schools.com/cssref/func_steps.php */
     animation: specialistTyping 5s steps(20) 1;
 }
 
@@ -276,7 +345,7 @@ body {
     margin-bottom: 1vw;
     width: 70vw;
     height: max-content;
-    overflow: scroll hidden;
+    overflow: hidden hidden;
 }
 
 .certificateCard {
@@ -394,13 +463,17 @@ body {
 
 
 /* Tools & Technologies section css */
+#techStack {
+    background-color: #79746a21;
+}
+
 #techStack,
 .toolsHeader {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: max-content;
-    margin: 0vw 0vw 5vw;
+    padding: 0vw 0vw 5vw;
 }
 
 .toolsImg {
@@ -463,13 +536,16 @@ body {
 
 
 /* Projects section css */
+#projects {
+    background-color: #ae93e0;
+}
+
 #projects,
 .projectsHeader {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: max-content;
-    background-color: #ae93e0;
     padding: 0vw 0vw 5vw;
 }
 
@@ -500,7 +576,7 @@ body {
     justify-content: flex-start;
     align-self: center;
     flex-wrap: wrap;
-    height: 90vw;
+    height: 110vw;
     width: 90%;
 }
 
@@ -534,13 +610,13 @@ body {
 }
 
 .projectTools {
-    font-size: 1.15vw;
+    font-size: 1vw;
     color: gray;
     margin: 0.25vw;
 }
 
 .projectDescription {
-    font-size: 1.25vw;
+    font-size: 1vw;
     font-weight: bold;
     width: auto;
     text-align: justify;
@@ -556,7 +632,7 @@ body {
 }
 
 .projectLink:hover {
-    color: #FF6F5C;
+    color: #FF6F5C !important;
 }
 
 .projectLink img {
@@ -612,6 +688,7 @@ body {
 
 .socialAccounts a {
     display: flex;
+    font-size: 1.25vw;
     flex-direction: row;
     align-items: center;
     margin: 2vw 2vw;
@@ -638,6 +715,7 @@ body {
 .fullName,
 .email,
 .meassage {
+    font-size: 1.25vw;
     font-weight: 600;
     margin-bottom: 0.5vw;
 }
@@ -656,4 +734,44 @@ body {
 
 #meassageInput {
     height: 10vw;
+}
+
+
+/* Dark mode css */
+/* I used !important to enforce the element to use this style */
+.darkModeFontColor {
+    color: #faf9f7 !important;
+}
+
+.darkModeBody {
+    background-color: #1e1e1e !important;
+}
+
+.darkModeSection {
+    background-color: #252526 !important;
+    box-shadow: 0px 0px 5px #1e1e1e !important;
+}
+
+.nameDarkMode {
+    background-color: #698a3a !important;
+}
+
+.specialistDarkMode {
+    background-color: #944136 !important;
+}
+
+.darkModeProjectSection {
+    background-color: #281F45 !important;
+}
+
+.darkModeBtn {
+    background-color: #c58104 !important;
+}
+
+.darkModeCertificateCard {
+    background-color: #464649 !important;
+}
+
+.darkModeProjectCard {
+    background-color: #4c4366 !important;
 }
