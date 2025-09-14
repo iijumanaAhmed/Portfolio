@@ -1,3 +1,5 @@
+// Written by Jumana Ahmed Khawaji
+
 function init() {
     const resumeURL = document.querySelector('#resumeBtn')
     const senderName = document.querySelector('.fullNameInput')
