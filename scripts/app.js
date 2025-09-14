@@ -88,12 +88,12 @@ function init() {
                 Elem.classList.add('darkModeProjectCard')
             })
             githubIcon.forEach(icon => {
-                icon.src = "./images/tools/github_Icon_DarkMode.png"
+                icon.src = "./images/tools/gitHub_Icon_DarkMode.png"
             })
 
         } else {
             darkLightModeElem.textContent = 'Dark Mode'
-            logoElem.src = "./images/portofolio_logo_LightMode.png"
+            logoElem.src = "./images/portofolio_logo_lightMode.png"
             tool1.src = "./images/tools/Android_Studio_LightMode.png"
             tool2.src = "./images/tools/axure_LightMode.png"
             tool3.src = "./images/tools/balasmiq_LightMode.png"
